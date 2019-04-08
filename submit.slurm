@@ -38,5 +38,4 @@ module load use.own                        # This line loads the own module list
 module load matlab
 
 echo 'command line argument:' "${1}"
-cd ${1}
 matlab -nodisplay -r "example('${1}'); quit"
