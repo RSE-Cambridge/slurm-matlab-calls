@@ -5,7 +5,6 @@
 #SBATCH -J matlab-example
 #SBATCH -A SUPPORT-CPU
 #! Output filename:
-#! %A means slurm job ID and %a means array index
 #SBATCH --output=matlab_example.out 
 #! Errors filename:
 #SBATCH --error=matlab_example.err 
@@ -16,14 +15,12 @@
 #SBATCH --ntasks=1
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1 
-#! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
+#! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded)
 #SBATCH --time=00:05:00
-#! Estimated maximum memory needed (job is force-stopped if exceeded):
-#! RAM is allocated in ~5990mb blocks, you are charged per block used,
-#! and unused fractions of blocks will not be usable by others.
-##SBATCH --mem=100mb
+#! Estimated maximum memory needed (job is force-stopped if exceeded)
+##SBATCH --mem=5990mb
 
-#! This is the partition name. This will request for a node with 6GB RAM for each task
+#! This is the partition name.
 #SBATCH -p skylake-himem
 
 #! mail alert at start, end and abortion of execution

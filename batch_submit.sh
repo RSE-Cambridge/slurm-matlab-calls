@@ -7,6 +7,7 @@ for sess in `seq 1 1 2` ; do
     echo 'working on:' "${sess}"
     
     mkdir ${baseDir}
+	cd ${baseDir}
 	sbatch submit.slurm ${baseDir}
 
 done
