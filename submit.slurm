@@ -2,13 +2,13 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J test_dmtcp
+#SBATCH -J matlab-example
 #SBATCH -A SUPPORT-CPU
 #! Output filename:
 #! %A means slurm job ID and %a means array index
-#SBATCH --output=test_dmtcp.out 
+#SBATCH --output=matlab_example.out 
 #! Errors filename:
-#SBATCH --error=test_dmtcp.err 
+#SBATCH --error=matlab_example.err 
 
 #! Number of nodes to be allocated for the job (for single core jobs always leave this at 1)
 #SBATCH --nodes=1 
@@ -17,14 +17,14 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1 
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=00:01:00
+#SBATCH --time=00:05:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5990mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
-#SBATCH --mem=100mb
+##SBATCH --mem=100mb
 
 #! This is the partition name. This will request for a node with 6GB RAM for each task
-#SBATCH -p skylake
+#SBATCH -p skylake-himem
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
