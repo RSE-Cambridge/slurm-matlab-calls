@@ -5,7 +5,7 @@
 #SBATCH -J matlab-example
 #SBATCH -A SUPPORT-CPU
 #! Output filename:
-#SBATCH --output=matlab_example.out 
+###SBATCH --output=matlab_example.out 
 #! Errors filename:
 #SBATCH --error=matlab_example.err 
 
