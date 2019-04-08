@@ -42,14 +42,17 @@ module load matlab
 
 for sess in `seq 1 1 2` ; do
 
-    # baseDirectory="/lustre/archive/q10027/NSPN/BIDS/"$sub"/sess0"$sess"/proc_rsfmri/"
+    baseDir='/home/ea461/rds/rds-hpc-support/ea461/HPCSSUP-16575/slurm-matlab-calls/'${sess}
+
+    #baseDirectory="/lustre/archive/q10027/NSPN/BIDS/"$sub"/sess0"$sess"/proc_rsfmri/"
 
     # if [ -e ${baseDirectory}/echo123_medn.nii.gz ]
     # then
     echo 'working on:' "${sess}"
     # sbatch --output=/lustre/archive/q10027/NSPN/logs/FuncToParc/_func_to_Surf_"$sub"_sess0"$sess".log --nodes=1 --ntasks=1 --cpus-per-task=1 --time=04:00:00 --mem=8000 connectomiser.sh $baseDirectory
-
-    matlab -nodisplay -r "example('${sess}'); quit"
+    
+    mkdir ${baseDir}
+    matlab -nodisplay -r "example('${baseDir}'); quit"
 
     # fi
 

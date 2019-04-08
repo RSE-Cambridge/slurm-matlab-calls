@@ -21,10 +21,10 @@ function example(name)
 %
 % See also: none
 %
-% $Author: Eleftherios Avramidis, Department of Plant Sciences, Cambridge $
-% $Email: el.avramidis@gmail.com, ea461@cam.ac.uk $
+% $Author: Eleftherios Avramidis, Research Computing Services, Cambridge $
+% $Email: ea461@cam.ac.uk $
 % $Copyright: MIT License $
-% $Date: 2017/12/06 $
+% $Date: 2019/04/08 $
 % $Version: 1.0 $
 
 tic
@@ -35,7 +35,7 @@ tic
 %save([num2str(name) '_b.mat'],'b')
 
 b=2;
-save([num2str(name) '_b.mat'],'b');
+save([num2str(name) '/b.mat'],'b');
 toc
 
 end
