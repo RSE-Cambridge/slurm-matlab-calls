@@ -7,6 +7,6 @@ for sess in `seq 1 1 2` ; do
     echo 'working on:' "${sess}"
     
     mkdir ${baseDir}
-	sbatch --output=paok${sess}.log submit.slurm ${baseDir}
+	sbatch submit.slurm ${baseDir} --output=paok${sess}.log
 
 done
