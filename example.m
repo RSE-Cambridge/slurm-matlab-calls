@@ -35,7 +35,7 @@ tic
 %save([num2str(name) '_b.mat'],'b')
 
 b=2;
-cd num2str(name)
+cd(num2str(name))
 save([num2str(name) '/b.mat'],'b');
 toc
 

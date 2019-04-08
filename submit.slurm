@@ -21,7 +21,7 @@
 ##SBATCH --mem=5990mb
 
 #! This is the partition name.
-#SBATCH -p skylake
+#SBATCH -p skylake-himem
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
